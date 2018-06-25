@@ -1,5 +1,5 @@
 import copy
-def powerset(entryArray):
+def powerset_ver_1(entryArray):
     finalArray = [[]]
     length = 2 ** len(entryArray);
     for value in range(length):
@@ -12,7 +12,7 @@ def powerset(entryArray):
                 finalArray.append(temp)
     return finalArray
 
-def powerset_ver_1(n):
+def powerset_ver_2(n):
     final = [[]]
     def powerset_helper(array, org_array, index):
         i = index
@@ -25,6 +25,3 @@ def powerset_ver_1(n):
     
     powerset_helper([], n, 0)
     return final 
-
-c = powerSet(["1","2"])
-print(c)
